@@ -1,11 +1,11 @@
-require('dotenv').config();
+require("dotenv").config();
 
-// config.js
 module.exports = {
-  database: 'ayushmita_db', // Your database name
-  username: 'root', // Your MySQL username
-  password: '',     
-  host: '127.0.0.1',
-  dialect: 'mysql'
+  database: process.env.DB_NAME,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT || 3306,
+  dialect: "mysql",
 };
 
